@@ -1,0 +1,153 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+body {
+    font-family: 'Merriweather', serif;
+    background-color: black;
+    color: white;
+}
+h1 {
+    font-family: 'Teko', sans-serif;
+    text-align: center;
+    border: 1px solid white;
+    margin-bottom: 0;
+    padding: 15px;
+}
+.site-title span {
+    color: hotpink;
+}
+.site-title:hover {
+    color: hotpink;
+}
+nav ul a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+nav ul a:hover {
+    background-color: rgb(88, 84, 84);
+}
+
+nav ul li {
+    list-style-type: none;
+    text-align: center;
+    border: 1px solid white;
+    margin: 1px 0;
+}
+nav ul {
+    padding-left: 0;
+    margin-top: 1px;
+}
+article {
+    background-color: rgb(88, 84, 84);
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+article div, article p {
+    text-align: left;
+    font-size: 0.8rem;
+}
+.meta-price {
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 20px; 
+}
+footer h1 span {
+    color: yellow;
+}
+footer h1:hover {
+    color: yellow;
+}
+/* tablet screen =================== */
+@media screen and (min-width: 700px) {
+.books {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 10px;
+}
+nav ul {
+    margin-bottom: 5px;
+}
+footer h1 {
+    margin-top: 0;
+}
+}
+/* ------------------------------- */
+/* Small Desktop */
+@media screen and (min-width: 1000px) {
+.books {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 10px;
+}
+header, footer {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 5px;
+}
+.site-title, .site-name-footer {
+    margin-top: 1px;
+    margin-bottom: 5px;
+    align-items: stretch; 
+    padding-top: 30px;
+}
+.site-name-footer {
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+footer nav {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+}
+/* ------------------------- */
+/* Large desktop ================ */
+@media screen and (min-width: 1400px) {
+    .books {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 10px;
+    }
+    article:nth-last-child(1),
+    article:nth-last-child(2) {
+        display: none;
+    }
+}
+/* ------------------------- */
+@media screen and (min-width: 2400px) {
+    .books {
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        column-gap: 10px;
+}
+article:nth-last-child(3) {
+    display: none;
+}
+header, footer {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 5px;
+}
+.site-title {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.main-menu {
+    grid-column-start: 4;
+    grid-column-end: 6;
+}
+.site-name-footer {
+    grid-column-start: 3;
+    grid-column-end: 6;
+}
+footer nav {
+    grid-column-start: 1;
+    grid-column-end: 3;
+ 
+}
+
+}
